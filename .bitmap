@@ -9,9 +9,15 @@
  */
 
 {
+    "ui/uniheart-pagination": {
+        "scope": "uniheart.experience",
+        "version": "fbfbfc685952788e9f0330cbd14f35a0d08e6661",
+        "mainFile": "index.ts",
+        "rootDir": "experience/ui/uniheart-pagination"
+    },
     "ui/uniheart-rich-footer": {
         "scope": "uniheart.experience",
-        "version": "63b151399b956f74058b114e3115a73b7b76fa93",
+        "version": "d959237d8416a7959cb0143be56ba5e90fbb7f2f",
         "mainFile": "index.ts",
         "rootDir": "experience/ui/uniheart-rich-footer"
     },
