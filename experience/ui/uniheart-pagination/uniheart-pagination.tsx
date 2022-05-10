@@ -13,6 +13,7 @@ export type UniheartPaginationProps = {
     pageSizeOptions?: number[];
     showTotal?: (total: number) => ReactNode;
     onChange?: (page: number, pageSize: number) => void;
+    itemRender?: (page: number, type: 'page' | 'prev' | 'next', originalElement: React.ReactNode) => React.ReactNode;
 };
 
 export function UniheartPagination({
@@ -22,7 +23,8 @@ export function UniheartPagination({
                                        limit,
                                        pageSizeOptions,
                                        showTotal,
-                                       onChange
+                                       onChange,
+    itemRender
                                    }: UniheartPaginationProps) {
     return (
         <div>
@@ -35,6 +37,7 @@ export function UniheartPagination({
                 pageSizeOptions={pageSizeOptions ?? [limit]}
                 showTotal={showTotal ?? (total => `Total ${total} items`)}
                 onChange={onChange}
+                itemRender={itemRender ?? (page => `${page}`)}
             />
             {children}
         </div>
