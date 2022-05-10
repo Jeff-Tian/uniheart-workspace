@@ -11,7 +11,7 @@
 {
     "ui/uniheart-rich-footer": {
         "scope": "uniheart.experience",
-        "version": "3b429fe676b1d2fc112bd43aee5d6f2cbe755247",
+        "version": "63b151399b956f74058b114e3115a73b7b76fa93",
         "mainFile": "index.ts",
         "rootDir": "experience/ui/uniheart-rich-footer"
     },
