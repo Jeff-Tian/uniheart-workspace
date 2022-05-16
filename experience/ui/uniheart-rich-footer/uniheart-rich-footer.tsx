@@ -1,8 +1,6 @@
 import React, {ReactNode} from 'react';
-import {Col, Layout, Row} from 'antd';
-import 'antd/dist/antd.css';
-
-const {Footer} = Layout;
+import Footer from 'rc-footer';
+import 'rc-footer/assets/index.css';
 
 export type UniheartRichFooterProps = {
     /**
@@ -12,125 +10,83 @@ export type UniheartRichFooterProps = {
 };
 
 export function UniheartRichFooter({children}: UniheartRichFooterProps) {
-    return (
-        <Layout>
-            <Footer>
-                <Row>
-                    <Col xs={2} sm={4} md={6} lg={8} xl={10}>
-                        <h3>我在 js.org</h3>
-                        <ul>
-                            <li>
-                                <a href="https://tictactoe.js.org" target="_blank">人工智能井字棋游戏</a>
-                            </li>
-                            <li>
-                                <a href="https://kmeans.js.org" target="_blank">K-Means 算法演示</a>
-                            </li>
-                            <li>
-                                <a href="https://id3.js.org" target="_blank">id3 算法演示</a>
-                            </li>
-                            <li>
-                                <a href="https://short.js.org" target="_blank">短网址生成器</a>
-                            </li>
-                            <li>
-                                <a href="https://ass-editor.js.org/" target="_blank">在线视频字幕编辑器</a>
-                            </li>
-                            <li>
-                                <a href="https://zizhujy.js.org" target="_blank">紫竹叽歪</a>
-                            </li>
-                            <li>
-                                <a href="https://share.js.org" target="_blank">分享工具</a>
-                            </li>
-                            <li>
-                                <a href="https://jokes.js.org" target="_blank">笑话大全</a>
-                            </li>
-                            <li>
-                                <a href="https://gitmoji.js.org" target="_blank">Gitmoji</a>
-                            </li>
-                            <li>
-                                <a href="https://qbit.js.org" target="_blank">Qbit</a>
-                            </li>
-                        </ul>
+    const getColumns = () => {
+        const col1 = {
+            title: '我在 js.org',
+            items: [
+                {
+                    title: '人工智能井字棋游戏',
+                    url: 'https://tictactoe.js.org',
+                    openExternal: true,
+                },
+                {
+                    title: 'K-Means 算法演示',
+                    url: 'https://kmeans.js.org',
+                    openExternal: true
+                },
+                {
+                    title: 'id3 算法演示', url: 'https://id3.js.org', openExternal: true
+                },
+                {title: '短网址生成器', url: 'https://short.js.org', openExternal: true},
+                {title: '在线视频字幕编辑器', url: 'https://ass-editor.js.org', openExternal: true},
+                {title: '紫竹叽歪', url: 'https://zizhujy.js.org', openExternal: true},
+                {title: '分享工具', url: 'https://share.js.org', openExternal: true},
+                {title: '笑话大全', url: 'https://joke.js.org', openExternal: true},
+                {title: 'Gitmoji', url: 'https://gitmoji.js.org', openExternal: true},
+                {title: 'qbit', url: 'https://qbit.js.org', openExternal: true},
+            ]
+        };
+        const col2 = {
+            title: '我在 netlify',
+            items: [
+                {title: 'SICP 习题集', url: 'https://sicp.jiwai.win', openExternal: true},
+                {title: '《机器学习》练习作业', url: 'https://ml.jiwai.win/', openExternal: true},
+                {title: 'Jeff Tian', url: 'https://jeff-tian.jiwai.win/', openExternal: true},
+                {title: '心情随笔', url: 'https://heart.pa-ca.me/', openExternal: true},
+                {title: 'InversifyJS 中文文档', url: 'https://doc.inversify.cloud/', openExternal: true},
+                {title: 'InversifyJs 中文广告页', url: 'https://inversify.cn', openExternal: true},
+                {title: 'UniBeta', url: 'https://unibeta.jiwai.win', openExternal: true},
+                {title: '在线视频字幕编辑器', url: 'https://ass-editor.js.org', openExternal: true},
+                {title: '瑜伽男', url: 'https://yoga.pa-pa.me/', openExternal: true},
+                {title: 'SubText', url: 'https://subtext.pa-pa.me', openExternal: true},
+                {title: '哈哈哈', url: 'https://fire.pa-pa.me/', openExternal: true},
+            ]
+        };
+        const col3 = {
+            title: '开源贡献',
+            items: [
+                {title: 'Skulpt', url: 'https://skulpt.org', openExternal: true},
+                {title: 'Flot', url: 'https://www.flotcharts.org', openExternal: true},
+                {title: 'egg js', url: 'https://www.eggjs.org', openExternal: true},
+                {title: 'koa js', url: 'https://koajs.com/', openExternal: true},
+                {title: 'Taro', url: 'https://taro.js.com/', openExternal: true},
+                {
+                    title: '算法可视化',
+                    url: 'https://algorithm-visualizer.org/uncategorized/k-means-clustering',
+                    openExternal: true
+                },
+                {
+                    title: 'Keycloak',
+                    url: 'https://github.com/keycloak/keycloak',
+                    openExternal: true
+                }
+            ]
+        };
 
-                    </Col>
-                    <Col xs={20} sm={16} md={12} lg={8} xl={4}>
-                        <h3>我在 netlify</h3>
-                        <ul>
-                            <li>
-                                <a href="https://sicp.jiwai.win" target="_blank">SICP 习题集</a>
-                            </li>
-                            <li>
-                                <a href="https://ml.jiwai.win/" target="_blank">《机器学习》练习作业</a>
-                            </li>
-                            <li>
-                                <a href="https://jeff-tian.jiwai.win" target="_blank">Jeff Tian</a>
-                            </li>
-                            <li>
-                                <a href="https://heart.pa-ca.me/" target="_blank">心情随笔</a>
-                            </li>
-                            <li>
-                                <a href="https://doc.inversify.cloud/" target="_blank">InversifyJS 中文文档</a>
-                            </li>
-                            <li>
-                                <a href="https://inversify.cn/" target="_blank">InversifyJs 中文广告页</a>
-                            </li>
-                            <li>
-                                <a href="https://unibeta.jiwai.win/" target="_blank">UniBeta</a>
-                            </li>
-                            <li>
-                                <a href="https://ass-editor.js.org/" target="_blank">在线视频字幕编辑器</a>
-                            </li>
-                            <li>
-                                <a href="https://yoga.pa-pa.me/" target="_blank">瑜伽男</a>
-                            </li>
-                            <li>
-                                <a href="https://subtext.pa-pa.me/" target="_blank">SubText</a>
-                            </li>
-                            <li>
-                                <a href="https://fire.pa-pa.me/" target="_blank">哈哈哈</a>
-                            </li>
-                        </ul>
-                    </Col>
-                    <Col xs={2} sm={4} md={6} lg={8} xl={10}>
-                        <h3>开源贡献</h3>
-                        <ul>
-                            <li>
-                                <a href="https://skulpt.org/" target="_blank">Skulpt</a>
-                            </li>
-                            <li>
-                                <a href="https://www.flotcharts.org/" target="_blank">Flot</a>
-                            </li>
-                            <li>
-                                <a href="https://www.eggjs.org/" target="_blank">egg js</a>
-                            </li>
-                            <li>
-                                <a href="https://koajs.com/" target="_blank">koa js</a>
-                            </li>
-                            <li>
-                                <a href="https://taro.jd.com/" target="_blank">Taro</a>
-                            </li>
-                            <li>
-                                <a href="https://algorithm-visualizer.org/uncategorized/k-means-clustering" target="_blank">算法可视化</a>
-                            </li>
-                        </ul>
-                        <h3>其他</h3>
-                        <ul>
-                            <li>
-                                <a href="https://keycloak.jiwai.win/" target="_blank">Keycloak</a>
-                            </li>
-                            <li>
-                                <a href="https://id6.azurewebsites.net/" target="_blank">IdentityServer 6</a>
-                            </li>
-                            <li>
-                                <a href="https://ggyy.pa-pa.me" target="_blank">叽叽歪歪</a>
-                            </li>
-                            <li>
-                                <a href="https://skulpt.org/" target="_blank">Skulpt</a>
-                            </li>
-                        </ul>
-                    </Col>
-                </Row>
-            </Footer>
-            {children}
-        </Layout>
-    );
+        const col4 = {
+            title: '我的其他站点',
+            items: [
+                {title: 'Keycloak', url: 'https://keycloak.jiwai.win', openExternal: true},
+                {title: 'IdentityServer 6', url: 'https://id6.azurewebsites.net/', openExternal: true},
+                {title: '叽叽歪歪', url: 'https://ggyy.pa-pa.me', openExternal: true}
+            ]
+        }
+
+        return [col1, col2, col3, col4];
+    }
+
+    return <Footer
+        columns={getColumns()}
+        bottom="Made with ❤️ by Jeff Tian"
+    />;
 }
