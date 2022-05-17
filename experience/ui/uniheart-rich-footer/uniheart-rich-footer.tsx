@@ -87,6 +87,6 @@ export function UniheartRichFooter({children}: UniheartRichFooterProps) {
 
     return <Footer
         columns={getColumns()}
-        bottom="Made with ❤️ by Jeff Tian"
+        bottom={<a href="https://www.zhihu.com/consult/people/1073548674713423872" target="_blank">欢迎来知乎向我咨询 ❤️</a>}
     />;
 }
