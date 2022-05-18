@@ -74,11 +74,28 @@ export function UniheartRichFooter({children}: UniheartRichFooterProps) {
         };
 
         const col4 = {
-            title: '我的其他站点',
+            title: '我的其他',
             items: [
+                {
+                    title: '哈德韦订阅号',
+                    description: <img alt="哈德韦公众号" src="https://ml.jiwai.win/mp-hardway.png"
+                                      style={{maxWidth: '150px'}}/>
+                },
+                {
+                    title: '哈德韦小程序',
+                    description: <img alt="哈德韦小程序"
+                                      src={`https://uniheart.pa-ca.me/proxy?url=${encodeURIComponent('https://cdn.nlark.com/yuque/0/2022/png/221736/1642774938458-c1f6feb2-394d-4fa2-9163-c9b049bad39d.png')}`}
+                                      style={{maxWidth: '100px'}}/>
+                },
+                {
+                    title: 'Jeff Tian APP',
+                    url: 'https://jeff-tian-app-jefftian.vercel.app/jeff-tian-release.apk',
+                    openExternal: true
+                },
                 {title: 'Keycloak', url: 'https://keycloak.jiwai.win', openExternal: true},
                 {title: 'IdentityServer 6', url: 'https://id6.azurewebsites.net/', openExternal: true},
-                {title: '叽叽歪歪', url: 'https://ggyy.pa-pa.me', openExternal: true}
+                {title: '叽叽歪歪', url: 'https://ggyy.pa-pa.me', openExternal: true},
+                {title: '《计算机网络——自顶向下方法》习题集', url: 'https://notion.inversify.cn/cnatda-chapter6', openExternal: true},
             ]
         }
 
