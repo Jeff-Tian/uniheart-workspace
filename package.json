@@ -10,6 +10,7 @@
     "react-dom": "^18.1.0"
   },
   "devDependencies": {
+    "@testing-library/react": "^13.4.0",
     "esbuild": "^0.14.39"
   },
   "main": "dist/ui/uniheart-rich-footer/uniheart-rich-footer.js",

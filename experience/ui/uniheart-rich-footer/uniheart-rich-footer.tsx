@@ -95,7 +95,11 @@ export function UniheartRichFooter({children}: UniheartRichFooterProps) {
                 {title: 'Keycloak', url: 'https://keycloak.jiwai.win', openExternal: true},
                 {title: 'IdentityServer 6', url: 'https://id6.azurewebsites.net/', openExternal: true},
                 {title: '叽叽歪歪', url: 'https://ggyy.pa-pa.me', openExternal: true},
-                {title: '《计算机网络——自顶向下方法》习题集', url: 'https://notion.inversify.cn/cnatda-chapter6', openExternal: true},
+                {
+                    title: '《计算机网络——自顶向下方法》习题集',
+                    url: 'https://notion.inversify.cn/cnatda-chapter6',
+                    openExternal: true
+                },
             ]
         }
 
@@ -104,6 +108,11 @@ export function UniheartRichFooter({children}: UniheartRichFooterProps) {
 
     return <Footer
         columns={getColumns()}
-        bottom={<a href="https://www.zhihu.com/consult/people/1073548674713423872" target="_blank">欢迎来知乎向我咨询 ❤️</a>}
+        bottom={<div><p><a href="https://www.zhihu.com/consult/people/1073548674713423872" target="_blank">欢迎来知乎向我咨询
+            ❤️</a></p><p>
+            <a href="https://www.zhihu.com/consult/people/1073548674713423872" target="blank">
+                <img src="https://first-go-vercel.vercel.app/api/dynamicimage" alt="向我咨询"/>
+            </a>
+        </p></div>}
     />;
 }
